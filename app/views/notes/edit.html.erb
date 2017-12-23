@@ -1,0 +1,21 @@
+<html>
+<body style="background-color: CornflowerBlue">
+<div class="container">
+<h1 style="color: MediumTurquoise">Alterando nota:</h1>
+<%= form_for @selected, html: { multipart: true } do |f| %>
+<div class="form-group" style="color: white">
+<%= f.label :titulo %>   
+<%= f.text_field :titulo, class: "form-control"%>
+</div>
+
+<div class="form-group" style="color: white">
+<%= f.label :texto %>  
+<%= f.text_area :texto, class: "form-control" %><br><br>
+</div>
+
+<%= f.submit "Salvar Nota", class: "btn btn-primary" %>
+<%=link_to '   Voltar  ', root_path, class: "btn btn-warning"%>
+<% end %>
+</div>
+</body>
+</html>

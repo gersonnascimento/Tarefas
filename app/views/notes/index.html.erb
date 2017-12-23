@@ -1,0 +1,49 @@
+<body style="background-color: CornflowerBlue">
+<div class="container">
+<div class="container">
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6"><h1 style="color:white">Bem Vindo ao sistema de notas</h1></div>
+  <div class="col-sm-3"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<table class="table">
+  <tr><td><%=link_to "Todas", '/notes/all', class: "btn btn-primary"%></td>
+  <td><%=link_to "Pendentes", root_path, class: "btn btn-success"%></td>
+  <td><%=link_to "Finalizadas", '/notes/end',class: "btn btn-danger" %></td>
+  <td><%=link_to "Nova Nota", new_note_path, class: "btn btn-success"%></td>
+</tr>  	
+</table>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+
+
+<br>
+<div class="container" style="margin-top: 20px">
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">  
+  <table class="table table-bordered">
+      <tr>
+      <th scope="col"><h3 style="color:white" >Lista de notas:</h3></th>
+    </tr>
+  </thead>
+  <% @notes.each do |note|%>
+  <%if note.status.chomp.to_i==0 %>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-success"%></p></td></tr>
+  <%else%>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-danger"%></p></td></tr>
+<%end end%>
+</table></div>
+  <div class="col-sm-4"></div>
+</div>
+</div>
+</div>
+

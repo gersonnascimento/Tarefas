@@ -1,0 +1,41 @@
+<body style="background-color: CornflowerBlue">
+<div class="container">
+<div class="container" style="margin-top: 20px">
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6">  
+  <table class="table table-bordered">
+      <tr>
+      <th scope="col"><h1 style="color:white"><%=@selected.titulo%></h1></th>
+    </tr>
+  </thead>
+  <tr><td><p style="color:white"><%=@selected.texto%></p></td></tr>
+  <%if @selected.status.chomp.to_i==1%>
+  <tr><td><p style="color:red">*Esta tarefa já foi finalizada.</p></td></tr>
+  <%end%>
+</table></div>
+  <div class="col-sm-3"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<table class="table">
+  <tr><td><%=link_to '   Editar   ', edit_note_path(@selected.id), class: "btn btn-primary"%></td>
+  <td><%=link_to 'Finalizar tarefa', "/notes/#{@selected.id}/finalize", class: "btn btn-primary" %></td>
+  <td><%=link_to '   Voltar  ', root_path, class: "btn btn-warning"%></td>
+</tr>  	
+</table>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+</body>
+
+
+

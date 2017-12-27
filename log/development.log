@@ -1,0 +1,1042 @@
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:18:17 -0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.6) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.6) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1059.1ms)
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateNotes (20171223001811)
+  [1m[35m (5.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "notes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar, "texto" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171223001811"]]
+  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AdStatusToNote (20171223012444)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171223012444"]]
+  [1m[35m (55.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStatusToNote (20171223023125)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "notes" ADD "status" varchar[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171223023125"]]
+  [1m[35m (55.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-26 14:18:54.036540"], ["updated_at", "2017-12-26 14:18:54.036540"]]
+  [1m[35m (63.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:19:07 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 1493ms (Views: 1465.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-26 12:19:25 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (220.0ms)
+Completed 200 OK in 439ms (Views: 423.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:19:57 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 192ms (Views: 190.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-26 12:20:02 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 197ms (Views: 186.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-12-26 12:20:18 -0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yS+hSKu+9uhdx/KuVXMfS0rGzTkLcb3XQ4r4UoSXKUaMEaZqvRoro+fiaF8yGmxCIXzomTJc3FEz7zQgu8gRZg==", "note"=>{"titulo"=>"Adesivo", "texto"=>"Não esquecer de pegar o adesivo com o Bakkelove.\r\n"}, "commit"=>"Salvar Nota"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("titulo", "texto", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["titulo", "Adesivo"], ["texto", "Não esquecer de pegar o adesivo com o Bakkelove.\r\n"], ["created_at", "2017-12-26 14:20:18.934540"], ["updated_at", "2017-12-26 14:20:18.934540"], ["status", "0"]]
+  [1m[35m (245.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 258ms (ActiveRecord: 247.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:20:19 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 190ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-26 12:20:22 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 194ms (Views: 182.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-12-26 12:20:35 -0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hfgz0+9F2Q4ST2ScmAeyvzw7LVFjsemWOjMta5YGtpzAxjTx+eEERahq/m3/bsG2V4EI8VqciBBKVuEZqVmOvA==", "note"=>{"titulo"=>"agua.", "texto"=>"beber agua."}, "commit"=>"Salvar Nota"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("titulo", "texto", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["titulo", "agua."], ["texto", "beber agua."], ["created_at", "2017-12-26 14:20:35.634540"], ["updated_at", "2017-12-26 14:20:35.634540"], ["status", "0"]]
+  [1m[35m (247.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 248.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:20:35 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 186ms (Views: 184.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:21:49 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 586ms (Views: 568.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-12-26 12:22:03 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 261ms (Views: 209.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/2/finalize" for 127.0.0.1 at 2017-12-26 12:22:10 -0200
+Processing by NotesController#finalize as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "notes" SET "status" = ?, "updated_at" = ? WHERE "notes"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-12-26 14:22:10.214540"], ["id", 2]]
+  [1m[35m (86.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 86.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:10 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 196ms (Views: 196.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 12:22:12 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 189.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-12-26 12:22:16 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 193ms (Views: 180.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:20 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 187ms (Views: 185.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2017-12-26 12:22:21 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 214ms (Views: 201.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/1/edit" for 127.0.0.1 at 2017-12-26 12:22:28 -0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/edit.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 224ms (Views: 211.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:31 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 188ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-26 12:22:33 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 192ms (Views: 190.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:35 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:37 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 192ms (Views: 192.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2017-12-26 12:22:38 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 194ms (Views: 181.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/1/finalize" for 127.0.0.1 at 2017-12-26 12:22:39 -0200
+Processing by NotesController#finalize as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "notes" SET "status" = ?, "updated_at" = ? WHERE "notes"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-12-26 14:22:39.586540"], ["id", 1]]
+  [1m[35m (94.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 95.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:39 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 194ms (Views: 191.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:42 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 190ms (Views: 190.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-26 12:22:43 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 191ms (Views: 190.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 12:22:48 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 191ms (Views: 189.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:22:49 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 189.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-26 12:26:32 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 193ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 12:26:35 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 189.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-26 12:26:36 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 200ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-12-26 12:26:50 -0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8LhibMIA+7abuWGwZwWEjl/5fMBzyA+E5/lEvOk2BY61hmVO1KQm/SGc+0EAbPeHNENZYErlbgKXnIjO1mk9rg==", "note"=>{"titulo"=>"celular", "texto"=>"comprar outro celular\r\n"}, "commit"=>"Salvar Nota"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("titulo", "texto", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["titulo", "celular"], ["texto", "comprar outro celular\r\n"], ["created_at", "2017-12-26 14:26:50.854540"], ["updated_at", "2017-12-26 14:26:50.854540"], ["status", "0"]]
+  [1m[35m (290.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 291.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:26:51 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 194ms (Views: 193.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 12:26:52 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 196ms (Views: 195.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 12:28:01 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 194ms (Views: 194.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-26 12:28:03 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 192ms (Views: 190.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 12:28:06 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 185ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 14:44:40 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Your template was not saved as valid UTF-8. Please either specify UTF-8 as the encoding for your template in your text editor, or mark the template with its encoding by inserting the following as the first line of the template:
+
+# encoding: <name of correct encoding>.
+
+The source of your template was:
+
+<body style="background-color: CornflowerBlue">
+<div class="container">
+<div class="container">
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6"><h1 style="color:white">Bem Vindo ao sistema Bakkel�ve!</h1></div>
+  <div class="col-sm-3"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<table class="table">
+  <tr><td><%=link_to "Todas", '/notes/all', class: "btn btn-primary"%></td>
+  <td><%=link_to "Pendentes", root_path, class: "btn btn-success"%></td>
+  <td><%=link_to "Finalizadas", '/notes/end',class: "btn btn-danger" %></td>
+  <td><%=link_to "Nova Nota", new_note_path, class: "btn btn-success"%></td>
+</tr>  	
+</table>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+
+
+<br>
+<div class="container" style="margin-top: 20px">
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">  
+  <table class="table table-bordered">
+      <tr>
+      <th scope="col"><h3 style="color:white" >Lista de notas:</h3></th>
+    </tr>
+  </thead>
+  <% @notes.each do |note|%>
+  <%if note.status.chomp.to_i==0 %>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-success"%></p></td></tr>
+  <%else%>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-danger"%></p></td></tr>
+<%end end%>
+</table></div>
+  <div class="col-sm-4"></div>
+</div>
+</div>
+</div>
+
+):
+Started GET "/" for 127.0.0.1 at 2017-12-26 14:44:44 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  Rendered notes/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Your template was not saved as valid UTF-8. Please either specify UTF-8 as the encoding for your template in your text editor, or mark the template with its encoding by inserting the following as the first line of the template:
+
+# encoding: <name of correct encoding>.
+
+The source of your template was:
+
+<body style="background-color: CornflowerBlue">
+<div class="container">
+<div class="container">
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-sm-6"><h1 style="color:white">Bem Vindo ao sistema Bakkel�ve!</h1></div>
+  <div class="col-sm-3"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<table class="table">
+  <tr><td><%=link_to "Todas", '/notes/all', class: "btn btn-primary"%></td>
+  <td><%=link_to "Pendentes", root_path, class: "btn btn-success"%></td>
+  <td><%=link_to "Finalizadas", '/notes/end',class: "btn btn-danger" %></td>
+  <td><%=link_to "Nova Nota", new_note_path, class: "btn btn-success"%></td>
+</tr>  	
+</table>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
+
+
+<br>
+<div class="container" style="margin-top: 20px">
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">  
+  <table class="table table-bordered">
+      <tr>
+      <th scope="col"><h3 style="color:white" >Lista de notas:</h3></th>
+    </tr>
+  </thead>
+  <% @notes.each do |note|%>
+  <%if note.status.chomp.to_i==0 %>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-success"%></p></td></tr>
+  <%else%>
+  <tr><td><p><%= link_to note.titulo, note_path(note.id), class: "btn btn-danger"%></p></td></tr>
+<%end end%>
+</table></div>
+  <div class="col-sm-4"></div>
+</div>
+</div>
+</div>
+
+):
+Started GET "/" for 127.0.0.1 at 2017-12-26 14:46:17 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 988ms (Views: 968.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 14:57:27 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 218ms (Views: 216.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-12-26 14:57:30 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 212ms (Views: 195.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/2/edit" for 127.0.0.1 at 2017-12-26 14:57:32 -0200
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/edit.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 236ms (Views: 222.1ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/notes/2" for 127.0.0.1 at 2017-12-26 14:57:55 -0200
+Processing by NotesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"derotZNdUOvgM8vghzbCwzdSH2a/hw40yBc7aJmzcv8w1O+XhfmNoFoWURHgX7HKXOg6xoaqb7K4cvcapuxK3w==", "note"=>{"titulo"=>"Agua", "texto"=>"Beber 2 litros de água por dia."}, "commit"=>"Salvar Nota", "id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "notes" SET "titulo" = ?, "texto" = ?, "updated_at" = ? WHERE "notes"."id" = ?[0m  [["titulo", "Agua"], ["texto", "Beber 2 litros de água por dia."], ["updated_at", "2017-12-26 16:57:55.743665"], ["id", 2]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/notes/2
+Completed 302 Found in 81ms (ActiveRecord: 73.0ms)
+
+
+Started GET "/notes/2" for 127.0.0.1 at 2017-12-26 14:57:55 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 202ms (Views: 189.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 14:58:00 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 190ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 14:58:01 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 189ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 14:59:09 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 596ms (Views: 577.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:01 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 236ms (Views: 235.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:02 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 217ms (Views: 216.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:03 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 194ms (Views: 193.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:04 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 194ms (Views: 193.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:04 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:05 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 375ms (Views: 374.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:05 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (5.0ms)
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:05 -0200
+Processing by NotesController#ver_todas as HTML
+Completed 200 OK in 447ms (Views: 446.1ms | ActiveRecord: 0.0ms)
+
+
+  Rendering notes/index.html.erb within layouts/application
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:07:05 -0200
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+Processing by NotesController#ver_todas as HTML
+  Rendered notes/index.html.erb within layouts/application (50.0ms)
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 596ms (Views: 595.0ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 529ms (Views: 527.0ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 392ms (Views: 392.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:12:58 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 206ms (Views: 205.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:14:44 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 197ms (Views: 196.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:14:46 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 187ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:15:10 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 195ms (Views: 194.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 15:17:38 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 201ms (Views: 199.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-26 15:19:21 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 223ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 17:14:40 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 207ms (Views: 206.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 17:28:44 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 208ms (Views: 207.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-26 17:28:44 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 206ms (Views: 204.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 17:28:47 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 203ms (Views: 202.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 17:29:54 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 194ms (Views: 194.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 17:29:55 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 193ms (Views: 191.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-26 17:29:56 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 203ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 15:25:45 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 1565ms (Views: 1507.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-27 15:26:04 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 215ms (Views: 214.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-27 15:32:03 -0200
+Processing by NotesController#new as HTML
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-27 15:32:13 -0200
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (129.2ms)
+Completed 200 OK in 346ms (Views: 317.4ms | ActiveRecord: 1.0ms)
+
+
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 208ms (Views: 187.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-12-27 15:32:38 -0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lqt75dJe5B54zGOgvXLCH63aFY7HRSX6x8PjYYla+3/TlXzHxPo5VcLp+VHaG7EWxmAwLv5oRHy3pi8TtgXDXw==", "note"=>{"titulo"=>"Cal", "texto"=>"Fazer um sistema de chamados, parecido com o CAL."}, "commit"=>"Salvar Nota"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("titulo", "texto", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["titulo", "Cal"], ["texto", "Fazer um sistema de chamados, parecido com o CAL."], ["created_at", "2017-12-27 17:32:38.757691"], ["updated_at", "2017-12-27 17:32:38.757691"], ["status", "0"]]
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 15:32:38 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 205ms (Views: 204.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2017-12-27 15:32:41 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 245ms (Views: 191.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 15:32:45 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 185ms (Views: 184.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:01:37 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 205ms (Views: 199.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:01:39 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 203ms (Views: 201.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-27 16:01:42 -0200
+Processing by NotesController#finalizeds as HTML
+Filter chain halted as #<Proc:0x5926230@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-27 16:01:50 -0200
+Processing by NotesController#finalizeds as HTML
+Filter chain halted as #<Proc:0x5926230@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-27 16:02:04 -0200
+Processing by NotesController#new as HTML
+Filter chain halted as #<Proc:0x5926230@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:03:48 -0200
+Processing by NotesController#index as HTML
+Filter chain halted as #<Proc:0x924c498@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:03:52 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 206ms (Views: 200.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:04:00 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 192ms (Views: 190.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:04:06 -0200
+Processing by NotesController#index as HTML
+Filter chain halted as #<Proc:0x924c498@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:04:06 -0200
+Processing by NotesController#index as HTML
+Filter chain halted as #<Proc:0x924c498@c:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:04:20 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 185ms (Views: 184.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-27 16:05:11 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 195ms (Views: 194.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/3" for 127.0.0.1 at 2017-12-27 16:05:13 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 202ms (Views: 187.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:05:16 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 187ms (Views: 186.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:05:32 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 190ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-27 16:05:34 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 192ms (Views: 190.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/end" for 127.0.0.1 at 2017-12-27 16:06:56 -0200
+Processing by NotesController#finalizeds as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 1)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 202ms (Views: 200.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:06:58 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (1.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 195ms (Views: 193.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-27 16:06:59 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 184ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-27 16:07:02 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 202ms (Views: 191.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/new" for 127.0.0.1 at 2017-12-27 16:07:06 -0200
+Processing by NotesController#new as HTML
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 202ms (Views: 191.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2017-12-27 16:07:52 -0200
+Processing by NotesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+FqeJxW9UzZ/lKaaS1vvcyl9Tw+7uvpWN5pRF3EZxoqvyxj/d26mAk9stq9yYIfeJZItmVzaEyhyw+lAPAMCyw==", "note"=>{"titulo"=>"Login", "texto"=>"Adicionar login com identificação de usuário mesmo, não apenas com string."}, "commit"=>"Salvar Nota"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "notes" ("titulo", "texto", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?)[0m  [["titulo", "Login"], ["texto", "Adicionar login com identificação de usuário mesmo, não apenas com string."], ["created_at", "2017-12-27 18:07:52.595984"], ["updated_at", "2017-12-27 18:07:52.595984"], ["status", "0"]]
+  [1m[35m (46.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 47.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:07:52 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 196ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/5" for 127.0.0.1 at 2017-12-27 16:07:55 -0200
+Processing by NotesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT  "notes".* FROM "notes" WHERE "notes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 205ms (Views: 191.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-27 16:08:03 -0200
+Processing by NotesController#index as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE (status = 0)[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 228ms (Views: 227.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/notes/all" for 127.0.0.1 at 2017-12-27 16:10:14 -0200
+Processing by NotesController#ver_todas as HTML
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (0.0ms)[0m  [1m[34mSELECT "notes".* FROM "notes"[0m
+  Rendered notes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 186ms (Views: 184.9ms | ActiveRecord: 0.0ms)
+
+

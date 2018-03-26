@@ -13,6 +13,24 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-5 text-center"><h1 style="color:white"> Bem Vindo a sua agenda.</h1></div>
+  <div class="col-sm-3"></div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<table class="table table-striped">
+  <tr><td><%=link_to "Todas", '/notes/all', class: "btn btn-primary"%></td>
+  <td><%=link_to "Pendentes", root_path, class: "btn btn-success"%></td>
+  <td><%=link_to "Finalizadas", '/notes/end',class: "btn btn-danger" %></td>
+  <td><%=link_to "Nova Nota", new_note_path, class: "btn btn-success"%></td>
+</tr>  	
+</table>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
     <%= yield %>
   </body>
 </html>

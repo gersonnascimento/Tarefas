@@ -1,14 +1,13 @@
 class NotesController < ApplicationController
-
           http_basic_authenticate_with name: "gerson", password: "gerson"
 
-        def index
+  def index
 		@notes = Note.where("status = 0")
 		render 'index'
 	end
 
 	def ver_todas
-          @notes = Note.all
+          @notes = Note.order(:status)
           render 'index'
 	end
 
@@ -26,6 +25,7 @@ class NotesController < ApplicationController
 	  @novo.status = 0
           if @novo.save then
             redirect_to root_url
+            flash[:notice] = 'Nota criada com sucesso!'
           else
             redirect_to "/produtos/new"
           end
